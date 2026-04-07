@@ -411,7 +411,7 @@ h1, h2, h3 {
 
 .section-header h2 { font-size: 3rem; color: var(--secondary); }
 
-.steps-grid {
+.steps-image-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
@@ -424,12 +424,29 @@ h1, h2, h3 {
   border: 1px solid var(--border);
   position: relative;
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .step-card:hover {
   transform: translateY(-10px);
   box-shadow: var(--shadow-lg);
   border-color: var(--primary);
+}
+
+.step-img {
+  margin-top: 24px;
+  width: 100%;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.step-card:hover .step-img {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
 }
 
 .step-number {
