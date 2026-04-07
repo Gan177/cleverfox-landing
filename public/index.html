@@ -1,46 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CleverFox - Finanzas Inteligentes</title>
-  
+
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-  
+
   <!-- SEO & Social Media Meta Tags -->
-  <meta name="description" content="CleverFox - Optimiza tus ingresos y alcanza tus metas financieras de forma pasiva, automatizada y segura con nuestra IA financiera.">
-  <meta name="keywords" content="finanzas personales, ahorro inteligente, inteligencia artificial, inversión, finanzas automatizadas">
+  <meta name="description"
+    content="CleverFox - Optimiza tus ingresos y alcanza tus metas financieras de forma pasiva, automatizada y segura con nuestra IA financiera.">
+  <meta name="keywords"
+    content="finanzas personales, ahorro inteligente, inteligencia artificial, inversión, finanzas automatizadas">
   <meta name="author" content="CleverFox">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cleverfoxapp.es/">
   <meta property="og:title" content="CleverFox - Finanzas Mucho Más Inteligentes">
-  <meta property="og:description" content="Únete a la nueva era de las finanzas personales automatizadas por IA. Maximiza tus ahorros sin esfuerzo.">
+  <meta property="og:description"
+    content="Únete a la nueva era de las finanzas personales automatizadas por IA. Maximiza tus ahorros sin esfuerzo.">
   <meta property="og:image" content="https://cleverfoxapp.es/capturas/home.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://cleverfoxapp.es/">
   <meta property="twitter:title" content="CleverFox - Finanzas Mucho Más Inteligentes">
-  <meta property="twitter:description" content="Únete a la nueva era de las finanzas personales automatizadas por IA. Maximiza tus ahorros sin esfuerzo.">
+  <meta property="twitter:description"
+    content="Únete a la nueva era de las finanzas personales automatizadas por IA. Maximiza tus ahorros sin esfuerzo.">
   <meta property="twitter:image" content="https://cleverfoxapp.es/capturas/home.png">
 
   <script defer src="anime.min.js"></script>
   <script defer src="script.js"></script>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container">
       <div class="logo">CleverFox</div>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="#hero">Inicio</a>
         <a href="#features">Ventajas</a>
         <a href="#surveys">Tu Opinión</a>
         <a href="#hero" class="nav-cta">Únete a la Beta</a>
       </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -49,35 +64,37 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-badge">
-          <div class="dot"></div> 
+          <div class="dot"></div>
           <span>Acceso Anticipado Exclusivo</span>
         </div>
         <h1 class="stagger-title">
-          <span class="word">Tus</span> 
+          <span class="word">Tus</span>
           <span class="word">finanzas,</span><br>
-          <span class="word gradient-text">mucho</span> 
+          <span class="word gradient-text">mucho</span>
           <span class="word gradient-text">más inteligentes</span>
         </h1>
-        <p>CleverFox optimiza tus ingresos para que alcances tus metas financieras de forma pasiva, automatizada y segura. Únete a la lista de espera.</p>
-        
+        <p>CleverFox optimiza tus ingresos para que alcances tus metas financieras de forma pasiva, automatizada y
+          segura. Únete a la lista de espera.</p>
+
         <form id="emailForm" class="email-form">
           <div class="email-input-wrapper">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
             <input type="email" id="emailInput" placeholder="tu@correo.com" required>
           </div>
-          <button type="submit" class="btn-primary">Añádirme a la lista</button>
+          <button type="submit" class="btn-primary">Añádirme a la WaitList</button>
         </form>
-        
+
         <div id="emailSuccess" class="email-success">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="20 6 9 17 4 12"></polyline>
-          </svg> 
+          </svg>
           ¡Estupendo! Ya estás en la lista de espera de CleverFox.
         </div>
-        
+
         <div class="hero-stats">
           <div class="stat">
             <h3><span data-count="124" id="waitlistCount">124+</span></h3>
@@ -89,15 +106,17 @@
           </div>
         </div>
       </div>
-      
+
       <div class="hero-visual">
-        <img src="capturas/home.png" alt="CleverFox Dashboard" class="phone-mockup" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x600/1E40AF/fff?text=App+Preview';">
+        <img src="capturas/home.png" alt="CleverFox Dashboard" class="phone-mockup" decoding="async"
+          fetchpriority="high"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/300x600/1E40AF/fff?text=App+Preview';">
         <div class="float-element">
-          <div class="icon green">💰</div> 
+          <div class="icon green">💰</div>
           <span>+20% Ahorro Medio</span>
         </div>
         <div class="float-element">
-          <div class="icon blue">🦊</div> 
+          <div class="icon blue">🦊</div>
           <span>CleverAssist IA</span>
         </div>
       </div>
@@ -110,35 +129,48 @@
       <div class="section-header reveal">
         <span class="section-label">El ecosistema CleverFox</span>
         <h2>Diseñado para el futuro</h2>
-        <p>No somos otra app de presupuesto. Somos inteligencia artificial dedicada a maximizar tu rendimiento financiero mes a mes.</p>
+        <p>No somos otra app de presupuesto. Somos inteligencia artificial dedicada a maximizar tu rendimiento
+          financiero mes a mes.</p>
       </div>
 
       <div class="feature-row reveal-left">
         <div class="feature-image-wrapper">
-          <img src="capturas/stats.png" alt="Estadísticas" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/38BDF8/fff?text=Graficos';">
+          <img src="capturas/stats.png" alt="Estadísticas" loading="lazy" decoding="async"
+            onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/38BDF8/fff?text=Graficos';">
         </div>
         <div class="feature-content">
           <div class="feature-icon-box blue">📊</div>
           <h3>Controla. Analiza. Crece.</h3>
-          <p>Ten un control absoluto sobre tu flujo de caja en tiempo real con estadísticas altamente intuitivas y personalizables.</p>
+          <p>Ten un control absoluto sobre tu flujo de caja en tiempo real con estadísticas altamente intuitivas y
+            personalizables.</p>
           <ul class="feature-list">
-            <li><div class="check">✓</div> Sincronización instantánea de cuentas</li>
-            <li><div class="check">✓</div> Alertas de sobregasto automatizadas</li>
+            <li>
+              <div class="check">✓</div> Sincronización instantánea de cuentas
+            </li>
+            <li>
+              <div class="check">✓</div> Alertas de sobregasto automatizadas
+            </li>
           </ul>
         </div>
       </div>
 
       <div class="feature-row reverse reveal-right">
         <div class="feature-image-wrapper">
-          <img src="capturas/escaner.png" alt="Inversiones" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/1E40AF/fff?text=Alertas';">
+          <img src="capturas/escaner.png" alt="Inversiones" loading="lazy" decoding="async"
+            onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/1E40AF/fff?text=Alertas';">
         </div>
         <div class="feature-content">
           <div class="feature-icon-box dark-blue">🤖</div>
           <h3>La Inteligencia Artificial de las Finanzas</h3>
-          <p>La IA de CleverFox analiza tus hábitos y te propone movimientos estratégicos que ahorran tiempo y dinero sin que te enteres.</p>
+          <p>La IA de CleverFox analiza tus hábitos y te propone movimientos estratégicos que ahorran tiempo y dinero
+            sin que te enteres.</p>
           <ul class="feature-list">
-            <li><div class="check">✓</div> Insights predictivos a 12 meses</li>
-            <li><div class="check">✓</div> Categorización 100% autónoma</li>
+            <li>
+              <div class="check">✓</div> Insights predictivos a 12 meses
+            </li>
+            <li>
+              <div class="check">✓</div> Categorización 100% autónoma
+            </li>
           </ul>
         </div>
       </div>
@@ -154,7 +186,7 @@
         <h2>Ayúdanos a perfecionar CleverFox</h2>
         <p>Todavía no hemos lanzado porque queremos construir lo que tú prefieres, no lo que nosotros suponemos.</p>
       </div>
-      
+
       <div class="surveys-grid">
         <!-- Survey 1: Price -->
         <div class="survey-card reveal reveal-delay-1">
@@ -176,7 +208,8 @@
           <h3><span class="emoji">✨</span> ¿Qué funcionalidad falta?</h3>
           <p class="subtitle">Si pudieras pedir solo una cosa...</p>
           <form id="featureSurveyForm" class="survey-form">
-            <textarea id="featureInput" class="survey-input" rows="3" placeholder="Ej: Me encantaría poder conectar con..." required></textarea>
+            <textarea id="featureInput" class="survey-input" rows="3"
+              placeholder="Ej: Me encantaría poder conectar con..." required></textarea>
             <button type="submit" class="survey-btn">Sugerir funcionalidad</button>
           </form>
           <div id="featureThankYou" class="survey-thank-you">
@@ -210,4 +243,5 @@
   </footer>
 
 </body>
+
 </html>
