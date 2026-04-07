@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CleverFox - Finanzas Inteligentes</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="anime.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">CleverFox</div>
+      <div class="nav-links">
+        <a href="#hero">Inicio</a>
+        <a href="#features">Ventajas</a>
+        <a href="#surveys">Tu Opinión</a>
+        <a href="#hero" class="nav-cta">Únete a la Beta</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <div class="dot"></div> 
+          <span>Acceso Anticipado Exclusivo</span>
+        </div>
+        <h1 class="stagger-title">
+          <span class="word">Tus</span> 
+          <span class="word">finanzas,</span><br>
+          <span class="word gradient-text">mucho</span> 
+          <span class="word gradient-text">más inteligentes</span>
+        </h1>
+        <p>CleverFox optimiza tus ingresos para que alcances tus metas financieras de forma pasiva, automatizada y segura. Únete a la lista de espera.</p>
+        
+        <form id="emailForm" class="email-form">
+          <div class="email-input-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <input type="email" id="emailInput" placeholder="tu@correo.com" required>
+          </div>
+          <button type="submit" class="btn-primary">Añádirme a la lista</button>
+        </form>
+        
+        <div id="emailSuccess" class="email-success">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg> 
+          ¡Estupendo! Ya estás en la lista de espera de CleverFox.
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat">
+            <h3><span data-count="124" id="waitlistCount">124+</span></h3>
+            <p>Personas esperando</p>
+          </div>
+          <div class="stat">
+            <h3><span data-count="5">0</span> / 5</h3>
+            <p>Score Proyectado</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <img src="assets/phone_mockup.webp" alt="CleverFox App Preview" class="phone-mockup" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x600/1E40AF/fff?text=App+Preview';">
+        <div class="float-element">
+          <div class="icon green">💰</div> 
+          <span>+20% Ahorro Medio</span>
+        </div>
+        <div class="float-element">
+          <div class="icon blue">🦊</div> 
+          <span>CleverAssist IA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">El ecosistema CleverFox</span>
+        <h2>Diseñado para el futuro</h2>
+        <p>No somos otra app de presupuesto. Somos inteligencia artificial dedicada a maximizar tu rendimiento financiero mes a mes.</p>
+      </div>
+
+      <div class="feature-row reveal-left">
+        <div class="feature-image-wrapper">
+          <img src="assets/feat1.webp" alt="Estadísticas" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/38BDF8/fff?text=Graficos';">
+        </div>
+        <div class="feature-content">
+          <div class="feature-icon-box blue">📊</div>
+          <h3>Controla. Analiza. Crece.</h3>
+          <p>Ten un control absoluto sobre tu flujo de caja en tiempo real con estadísticas altamente intuitivas y personalizables.</p>
+          <ul class="feature-list">
+            <li><div class="check">✓</div> Sincronización instantánea de cuentas</li>
+            <li><div class="check">✓</div> Alertas de sobregasto automatizadas</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-row reverse reveal-right">
+        <div class="feature-image-wrapper">
+          <img src="assets/feat2.webp" alt="Inversiones" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/1E40AF/fff?text=Alertas';">
+        </div>
+        <div class="feature-content">
+          <div class="feature-icon-box dark-blue">🤖</div>
+          <h3>La Inteligencia Artificial de las Finanzas</h3>
+          <p>La IA de CleverFox analiza tus hábitos y te propone movimientos estratégicos que ahorran tiempo y dinero sin que te enteres.</p>
+          <ul class="feature-list">
+            <li><div class="check">✓</div> Insights predictivos a 12 meses</li>
+            <li><div class="check">✓</div> Categorización 100% autónoma</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SURVEYS SECTION -->
+  <section class="section surveys-section" id="surveys">
+    <div class="stagger-grid-bg"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">TU VOZ IMPORTA</span>
+        <h2>Ayúdanos a perfecionar CleverFox</h2>
+        <p>Todavía no hemos lanzado porque queremos construir lo que tú prefieres, no lo que nosotros suponemos.</p>
+      </div>
+      
+      <div class="surveys-grid">
+        <!-- Survey 1: Price -->
+        <div class="survey-card reveal reveal-delay-1">
+          <h3><span class="emoji">💳</span> ¿Cuánto pagarías al mes?</h3>
+          <p class="subtitle">Buscamos el precio perfecto</p>
+          <form id="priceSurveyForm" class="survey-form">
+            <input type="text" id="priceInput" class="survey-input" placeholder="Ej: Me gustaría pagar X€" required>
+            <button type="submit" class="survey-btn">Enviar idea</button>
+          </form>
+          <div id="priceThankYou" class="survey-thank-you">
+            <div class="check-circle">✓</div>
+            <h4>¡Muchas Gracias!</h4>
+            <p>Hemos anotado tu respuesta en nuestro sistema.</p>
+          </div>
+        </div>
+
+        <!-- Survey 2: Features -->
+        <div class="survey-card reveal reveal-delay-2">
+          <h3><span class="emoji">✨</span> ¿Qué funcionalidad falta?</h3>
+          <p class="subtitle">Si pudieras pedir solo una cosa...</p>
+          <form id="featureSurveyForm" class="survey-form">
+            <textarea id="featureInput" class="survey-input" rows="3" placeholder="Ej: Me encantaría poder conectar con..." required></textarea>
+            <button type="submit" class="survey-btn">Sugerir funcionalidad</button>
+          </form>
+          <div id="featureThankYou" class="survey-thank-you">
+            <div class="check-circle">✓</div>
+            <h4>¡Genial!</h4>
+            <p>Hemos recibido tu propuesta. Esto nos ayuda mucho.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">CleverFox</div>
+          <p>Diseñando el futuro inteligente de las finanzas personales.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Inicio</a>
+          <a href="#features">Ventajas</a>
+          <a href="#surveys">Feedback</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 CleverFox Inc. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
