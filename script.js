@@ -118,7 +118,6 @@ function initHeroAnimations() {
     duration: 800,
     ease: 'spring(1, 80, 10, 0)',
   }, 800);
-  updateWaitlistCount();
 
   // Animated counters in stats
   document.querySelectorAll('[data-count]').forEach(el => {
@@ -270,9 +269,7 @@ function updateWaitlistCount() {
   const emails = JSON.parse(localStorage.getItem('cleverfox_emails') || '[]');
   const countEl = document.getElementById('waitlistCount');
   if (countEl) {
-    const total = 1247 + emails.length;
-    countEl.dataset.count = total; // Actualizamos el atributo para la animación
-    countEl.textContent = total.toLocaleString() + '+';
+    countEl.textContent = (1247 + emails.length).toLocaleString() + '+';
   }
 }
 
