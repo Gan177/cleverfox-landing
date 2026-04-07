@@ -4,11 +4,14 @@
 const SUPABASE_URL = 'https://iajssmaunqnfofooxssm.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_RlVYlXhBEV2e1XE_Fw2Bhg_-giI1QqU';
 
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
+  initMobileMenu();
   initHeroAnimations();
   initEmailForm();
-  initGridAnimation();
+  if (!isMobile) initGridAnimation();
   initSurveys();
   initScrollAnimations();
   initSmoothScroll();
@@ -24,6 +27,47 @@ function initNavbar() {
     } else {
       navbar.classList.remove('scrolled');
     }
+  });
+}
+
+/* --- Mobile menu --- */
+function initMobileMenu() {
+  const toggle = document.getElementById('mobileToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (!toggle || !navLinks) return;
+
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.classList.add('nav-overlay');
+  document.body.appendChild(overlay);
+
+  function closeMenu() {
+    toggle.classList.remove('active');
+    navLinks.classList.remove('open');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    toggle.classList.add('active');
+    navLinks.classList.add('open');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  toggle.addEventListener('click', () => {
+    if (navLinks.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  overlay.addEventListener('click', closeMenu);
+
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
   });
 }
 
@@ -99,7 +143,7 @@ function initHeroAnimations() {
 /* --- Floating particles background --- */
 function initParticles() {
   const hero = document.querySelector('.hero');
-  const particleCount = 20;
+  const particleCount = isMobile ? 6 : 20;
 
   for (let i = 0; i < particleCount; i++) {
     const particle = document.createElement('div');

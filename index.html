@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CleverFox - Finanzas Inteligentes</title>
   
+  <!-- Preconnect to Google Fonts for faster loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-  
+
   <!-- SEO & Social Media Meta Tags -->
   <meta name="description" content="CleverFox - Optimiza tus ingresos y alcanza tus metas financieras de forma pasiva, automatizada y segura con nuestra IA financiera.">
   <meta name="keywords" content="finanzas personales, ahorro inteligente, inteligencia artificial, inversión, finanzas automatizadas">
@@ -35,12 +40,15 @@
   <nav class="navbar">
     <div class="container">
       <div class="logo">CleverFox</div>
-      <div class="nav-links">
+      <div class="nav-links" id="navLinks">
         <a href="#hero">Inicio</a>
         <a href="#features">Ventajas</a>
         <a href="#surveys">Tu Opinión</a>
         <a href="#hero" class="nav-cta">Únete a la Beta</a>
       </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -91,7 +99,7 @@
       </div>
       
       <div class="hero-visual">
-        <img src="capturas/home.png" alt="CleverFox Dashboard" class="phone-mockup" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x600/1E40AF/fff?text=App+Preview';">
+        <img src="capturas/home.png" alt="CleverFox Dashboard" class="phone-mockup" decoding="async" fetchpriority="high" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x600/1E40AF/fff?text=App+Preview';">
         <div class="float-element">
           <div class="icon green">💰</div> 
           <span>+20% Ahorro Medio</span>
@@ -115,7 +123,7 @@
 
       <div class="feature-row reveal-left">
         <div class="feature-image-wrapper">
-          <img src="capturas/stats.png" alt="Estadísticas" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/38BDF8/fff?text=Graficos';">
+          <img src="capturas/stats.png" alt="Estadísticas" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/38BDF8/fff?text=Graficos';">
         </div>
         <div class="feature-content">
           <div class="feature-icon-box blue">📊</div>
@@ -130,7 +138,7 @@
 
       <div class="feature-row reverse reveal-right">
         <div class="feature-image-wrapper">
-          <img src="capturas/escaner.png" alt="Inversiones" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/1E40AF/fff?text=Alertas';">
+          <img src="capturas/escaner.png" alt="Inversiones" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://via.placeholder.com/320x320/1E40AF/fff?text=Alertas';">
         </div>
         <div class="feature-content">
           <div class="feature-icon-box dark-blue">🤖</div>
