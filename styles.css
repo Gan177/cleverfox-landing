@@ -6,12 +6,12 @@
 
 /* --- CSS Variables --- */
 :root {
-  --primary: #3B82F6;
-  --primary-rgb: 59, 130, 246;
-  --secondary: #1E40AF;
-  --secondary-rgb: 30, 64, 175;
-  --accent: #38BDF8;
-  --accent-rgb: 56, 189, 248;
+  --primary: #F97316;
+  --primary-rgb: 249, 115, 22;
+  --secondary: #FB6A1B;
+  --secondary-rgb: 251, 106, 27;
+  --accent: #FB6A1B;
+  --accent-rgb: 251, 106, 27;
   --bg: #F8FAFC;
   --card: #ffffff;
   --text-dark: #0F172A;
@@ -498,7 +498,7 @@ ul { list-style: none; }
    SURVEYS SECTION
    ============================================ */
 .surveys-section {
-  background: linear-gradient(180deg, var(--bg) 0%, #EFF6FF 100%);
+  background: linear-gradient(180deg, var(--bg) 0%, #FFF7ED 100%);
 }
 
 .surveys-grid {
