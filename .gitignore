@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Local tooling / config (may reference project resources)
+.mcp.json
+
+# Logs
+*.log
+npm-debug.log*

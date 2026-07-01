@@ -17,7 +17,23 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initParticles();
   initFooter();
+  initImageFallbacks();
 });
+
+/* --- Image fallbacks (CSP-safe, replaces inline onerror) --- */
+function initImageFallbacks() {
+  document.querySelectorAll('img[data-fallback]').forEach(img => {
+    const applyFallback = () => {
+      if (img.src !== img.dataset.fallback) img.src = img.dataset.fallback;
+    };
+    // If the image already failed before this ran, swap immediately.
+    if (img.complete && img.naturalWidth === 0) {
+      applyFallback();
+    } else {
+      img.addEventListener('error', applyFallback, { once: true });
+    }
+  });
+}
 
 /* --- Navbar scroll effect --- */
 function initNavbar() {
