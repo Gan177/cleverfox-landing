@@ -207,7 +207,7 @@ function initEmailForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const email = input.value.trim();
+    const email = sanitizeText(input.value, 254);
 
     if (!isValidEmail(email)) {
       // Shake animation with anime.js
@@ -296,6 +296,17 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+/* --- Sanitización de entradas (defensa en profundidad) --- */
+// Nota: esto mejora UX y frena abuso casual. La barrera REAL está en
+// Supabase (constraints + RLS), porque el JS se puede saltar con un POST directo.
+function sanitizeText(str, maxLen) {
+  return String(str)
+    .replace(/[\u0000-\u001F\u007F]/g, "")  // quita caracteres de control
+    .replace(/[<>]/g, '')                  // neutraliza etiquetas HTML/script
+    .trim()
+    .slice(0, maxLen);
+}
+
 function updateWaitlistCount() {
   const emails = JSON.parse(localStorage.getItem('cleverfox_emails') || '[]');
   const countEl = document.getElementById('waitlistCount');
@@ -325,7 +336,7 @@ function initPriceSurvey() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const val = input.value.trim();
+    const val = sanitizeText(input.value, 200);
     if (!val) return;
 
     localStorage.setItem('cleverfox_price_voted_text', 'true');
@@ -388,7 +399,7 @@ function initFeatureSurvey() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const val = input.value.trim();
+    const val = sanitizeText(input.value, 500);
     if (!val) return;
 
     localStorage.setItem('cleverfox_feature_voted_text', 'true');

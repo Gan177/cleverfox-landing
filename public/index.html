@@ -80,7 +80,7 @@
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            <input type="email" id="emailInput" placeholder="tu@correo.com" required>
+            <input type="email" id="emailInput" placeholder="tu@correo.com" maxlength="254" autocomplete="email" required>
           </div>
           <button type="submit" class="btn-primary">Añádirme a la WaitList</button>
         </form>
@@ -179,7 +179,7 @@
           <h3><span class="emoji">💳</span> ¿Cuánto pagarías al mes?</h3>
           <p class="subtitle">Buscamos el precio perfecto</p>
           <form id="priceSurveyForm" class="survey-form">
-            <input type="text" id="priceInput" class="survey-input" placeholder="Ej: Me gustaría pagar X€" required>
+            <input type="text" id="priceInput" class="survey-input" placeholder="Ej: Me gustaría pagar X€" maxlength="200" required>
             <button type="submit" class="survey-btn">Enviar idea</button>
           </form>
           <div id="priceThankYou" class="survey-thank-you">
@@ -194,7 +194,7 @@
           <h3><span class="emoji">✨</span> ¿Qué funcionalidad falta?</h3>
           <p class="subtitle">Si pudieras pedir solo una cosa...</p>
           <form id="featureSurveyForm" class="survey-form">
-            <textarea id="featureInput" class="survey-input" rows="3"
+            <textarea id="featureInput" class="survey-input" rows="3" maxlength="500"
               placeholder="Ej: Me encantaría poder conectar con..." required></textarea>
             <button type="submit" class="survey-btn">Sugerir funcionalidad</button>
           </form>
