@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimations();
   initSmoothScroll();
   initParticles();
+  initFooter();
 });
 
 /* --- Navbar scroll effect --- */
@@ -259,6 +260,20 @@ function initEmailForm() {
       }
     });
   });
+}
+
+/* --- Footer --- */
+function initFooter() {
+  const footer = document.querySelector('footer');
+  if (footer) {
+    if (!footer.querySelector('a[href="privacidad.html"]')) {
+      const separator = document.createTextNode(' · ');
+      const privacyLink = document.createElement('a');
+      privacyLink.href = 'privacidad.html';
+      privacyLink.textContent = 'Política de Privacidad';
+      footer.append(separator, privacyLink);
+    }
+  }
 }
 
 function isValidEmail(email) {
