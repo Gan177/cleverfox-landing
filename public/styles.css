@@ -87,8 +87,10 @@ ul { list-style: none; }
   gap: 10px;
   font-weight: 800;
   font-size: 1.5rem;
-  color: var(--secondary);
+  color: var(--text-dark);
 }
+
+.logo-accent { color: var(--primary); }
 
 .logo-icon {
   display: none; /* Deprecated */
